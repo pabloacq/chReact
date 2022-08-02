@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from './CartWidget';
-import './NavBar.css';
+
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" bg="french" variant="dark">
       <Container>
         <Navbar.Brand className="logoMain" href="#home">CatShop</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -21,8 +21,7 @@ function NavBar() {
               <NavDropdown.Item href="#peces">Peces</NavDropdown.Item>
               <NavDropdown.Item href="#aves">Aves</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#servicios">Servicios</Nav.Link>
-            
+            <Nav.Link href="#servicios">Servicios</Nav.Link>  
           </Nav>
         </Navbar.Collapse>
         <Nav>
