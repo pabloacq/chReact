@@ -1,8 +1,11 @@
 import React from 'react'
+import './ItemListContainer.css'
 
-function ItemListContainer({greeting}) {
+function ItemListContainer({ greeting }) {
   return (
-    <h2>{greeting}</h2>
+    <div className="ItemListContainer" >
+      <h2>{greeting}</h2>
+    </div>
   )
 }
 
