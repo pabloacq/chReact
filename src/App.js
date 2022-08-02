@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar.js';
+import ItemListContainer from './components/ItemListContainer';
 
 
 
@@ -8,9 +9,9 @@ function App() {
   return (
     <div className="App">
         <NavBar/>
-        <header className="App-header">
-            <img src="https://picsum.photos/id/40/300" className="App-logo" alt="logo" />
-      </header>
+        <main>
+          <ItemListContainer greeting="Ofertas"/>
+        </main>
     </div>
   );
 }

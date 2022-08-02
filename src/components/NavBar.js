@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from './CartWidget';
 import './NavBar.css';
 
 function NavBar() {
@@ -21,8 +22,12 @@ function NavBar() {
               <NavDropdown.Item href="#aves">Aves</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#servicios">Servicios</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
+        <Nav>
+          <CartWidget/>
+        </Nav>
       </Container>
     </Navbar>
   );
