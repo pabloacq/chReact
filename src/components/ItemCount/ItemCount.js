@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import {Container, Button } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 
 function ItemCount({product}) {
   const { stock = 0, min = 1, max = stock, step = 1 } = product
