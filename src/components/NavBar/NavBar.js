@@ -6,25 +6,28 @@ import CartWidget from '../CartWidget/CartWidget';
 
 
 function NavBar() {
+  const { Brand, Toggle, Collapse } = Navbar;
+  const {Link} = Nav
+  const {Item} = NavDropdown
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="french" variant="dark">
       <Container>
-        <Navbar.Brand className="logoMain" href="#home">CatShop</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Brand className="logoMain" href="#home">CatShop</Brand>
+        <Toggle aria-controls="responsive-navbar-nav" />
+        <Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Nav.Link href="#productos">Productos</Nav.Link>
-          <Nav.Link href="#ofertas">Ofertas</Nav.Link>
+          <Link href="#productos">Productos</Link>
+          <Link href="#ofertas">Ofertas</Link>
             <NavDropdown title="Mascotas" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#gatos">Gatos</NavDropdown.Item>
-              <NavDropdown.Item href="#perros">Perros</NavDropdown.Item>
-              <NavDropdown.Item href="#peces">Peces</NavDropdown.Item>
-              <NavDropdown.Item href="#aves">Aves</NavDropdown.Item>
+              <Item href="#gatos">Gatos</Item>
+              <Item href="#perros">Perros</Item>
+              <Item href="#peces">Peces</Item>
+              <Item href="#aves">Aves</Item>
             </NavDropdown>
-            <Nav.Link href="#servicios">Servicios</Nav.Link>  
+            <Link href="#servicios">Servicios</Link>  
           </Nav>
-        </Navbar.Collapse>
+        </Collapse>
         <Nav>
           <CartWidget/>
         </Nav>
