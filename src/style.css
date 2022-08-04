@@ -12,3 +12,8 @@
 .ct-main{
   margin-top: 1vh;
 }
+
+.w-33{
+  width: calc(100% / 3) !important;
+}
+
