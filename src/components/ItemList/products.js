@@ -1,7 +1,6 @@
 
 
-function products() {
- const prod = [{
+ const prods = [{
   "id": 1,
   "name": "Beef - Tenderloin Tails",
   "description": "Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
@@ -47,9 +46,6 @@ function products() {
   "min": 1,
   "img": "https://picsum.photos/200/200"
 }]
-  return (
-    prod
-  )
-}
 
-export default products
+
+export default prods

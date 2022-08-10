@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 
-function ItemCard({product}) {
+function Item({product}) {
   return (
     
     <Card style={{ width: '18%' }}>
@@ -14,4 +14,4 @@ function ItemCard({product}) {
   );
 }
 
-export default ItemCard;
+export default Item;
