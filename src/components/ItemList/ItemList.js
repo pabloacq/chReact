@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from 'react'
-import Item from '../Item/Item'
-import itemsData from './products.js'
+import ItemCard from '../ItemCard/ItemCard'
+import itemsData from '../../products.js'
 
 function getProductos(){
   return new Promise((resolve) => {
@@ -22,7 +22,7 @@ function ItemList() {
   return (
   <div className="d-flex justify-content-between">
       {products.map((producto, i) =>{
-        return <Item key={i} product={producto}/>
+        return <ItemCard key={i} product={producto}/>
       })}
   </div>
   )
