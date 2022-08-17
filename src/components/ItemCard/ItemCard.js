@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
+import {Link} from 'react-router-dom'
+import './ItemCard.css'
 
 function ItemCard({product}) {
   return (
@@ -10,6 +12,7 @@ function ItemCard({product}) {
       <Card.Body>
         <Card.Title className="h-50">{product.name}</Card.Title>
         <ItemCount product={product} />
+        <Link to={`/detail/${product.id}`}> Ver mas</Link>
       </Card.Body>
     </Card>
   );

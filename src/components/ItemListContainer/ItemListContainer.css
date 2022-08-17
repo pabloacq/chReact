@@ -1,12 +1,7 @@
 .itemWrapper{
   display:flex;
-  justify-content: space-between;
 }
 
 .ItemListContainer h2{
   text-align: left;
-}
-
-.ItemListContainer{
-
 }
