@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
-import { Link } from 'react-router-dom';
-
+import { cartContext } from '../../store/CartContext';
 
 
 function ItemDetail({ product }) {
-  const [count, setCount] = useState(0)
+  const {addToCart} = useContext(cartContext)
 
-  function onAdd(count) {
-    setCount(count)
+  function handleAdd(quantity) {
+    addToCart(product, quantity)
   }
 
 
@@ -22,12 +21,7 @@ function ItemDetail({ product }) {
         <Card.Title className="h-50">{name}</Card.Title>
       </Card.Body>
       <Card.Text>{description}</Card.Text>
-      {count === 0 ?
-        <ItemCount product={product} onAdd={onAdd} /> 
-        :
-        <Link to="/cart">Ir al carrito</Link>
-      }
-
+      <ItemCount product={product} onAdd={handleAdd} /> 
     </Card>
   );
 }
