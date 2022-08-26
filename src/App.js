@@ -10,6 +10,7 @@ import { CartProvider } from './store/CartContext'
 function App() {
   return (
     <div className="App">
+
       <BrowserRouter>
         <CartProvider>
           <NavBar />
@@ -23,6 +24,7 @@ function App() {
           </main>
         </CartProvider>
       </BrowserRouter>
+
     </div>
   );
 }

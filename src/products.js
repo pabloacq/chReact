@@ -9,7 +9,8 @@
   "step": 1,
   "min": 1,
   "img": "https://picsum.photos/200/200",
-  "category": "gato"
+  "category": "gato",
+  "price":1000
 }, {
   "id": 2,
   "name": "Cat Toy ",
@@ -19,7 +20,8 @@
   "step": 1,
   "min": 1,
   "img": "https://picsum.photos/200/200",
-  "category": "gato"
+  "category": "gato",
+  "price":1500
 }, {
   "id": 3,
   "name": "Dog Food",
@@ -29,7 +31,8 @@
   "step": 1,
   "min": 1,
   "img": "https://picsum.photos/200/200",
-  "category": "perro"
+  "category": "perro",
+  "price":950
 }, {
   "id": 4,
   "name": "Fish Food",
@@ -39,7 +42,8 @@
   "step": 1,
   "min": 1,
   "img": "https://picsum.photos/200/200",
-  "category": "pez"
+  "category": "pez",
+  "price":500
 }, {
   "id": 5,
   "name": "Bird Food",
@@ -49,7 +53,8 @@
   "step": 1,
   "min": 1,
   "img": "https://picsum.photos/200/200",
-  "category": "ave"
+  "category": "ave",
+  "price":300
 }]
 
 

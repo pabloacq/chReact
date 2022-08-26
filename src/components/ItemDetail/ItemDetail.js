@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
@@ -6,7 +6,11 @@ import { cartContext } from '../../store/CartContext';
 
 
 function ItemDetail({ product }) {
-  const {addToCart} = useContext(cartContext)
+  const {addToCart, cart} = useContext(cartContext)
+
+  useEffect(() => {
+     console.log(cart)
+   }, [cart])
 
   function handleAdd(quantity) {
     addToCart(product, quantity)
