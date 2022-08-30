@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import itemsData from '../../products.js'
 import {useParams} from 'react-router-dom'
+import {getProductById} from '../../services/DB'
 
 function getProducto(id){
   return new Promise((resolve) => {
@@ -11,9 +12,9 @@ function getProducto(id){
 
 function ItemDetailContainer() {
   const [product,setProduct]=useState()
-  const id = Number.parseInt((useParams().id))
+  const id = (useParams().id)
   useEffect(() =>{
-    getProducto(id).then((response) =>{
+    getProductById(id).then((response) =>{
       setProduct(response)
     });
   },[]);

@@ -8,10 +8,6 @@ import { cartContext } from '../../store/CartContext';
 function ItemDetail({ product }) {
   const {addToCart, cart} = useContext(cartContext)
 
-  useEffect(() => {
-     console.log(cart)
-   }, [cart])
-
   function handleAdd(quantity) {
     addToCart(product, quantity)
   }
