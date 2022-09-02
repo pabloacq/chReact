@@ -1,5 +1,5 @@
 import DB from './firestore'
-import { getDocs, collection, query, where, doc, getDoc } from 'firebase/firestore'
+import { getDocs, collection, query, where, doc, getDoc,addDoc } from 'firebase/firestore'
 
 export function getAllProducts() {
   return new Promise((resolve) => {
@@ -39,4 +39,19 @@ export function getProductById(id) {
     })
   })
 }
+
+export async function createProduct(product){
+  const productCollection = collection(DB, "productos")
+  const docRef = await addDoc(productCollection, product);
+
+  console.log(docRef.id)
+}
+
+export async function createOrder(order){
+  const productCollection = collection(DB, "orders")
+  const docRef = await addDoc(productCollection, order);
+
+  return docRef.id
+}
+
 

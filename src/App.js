@@ -6,6 +6,9 @@ import Cart from './components/Cart/Cart'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './style.css';
 import { CartProvider } from './store/CartContext'
+import OrderSuccess from './components/OrderSuccess/OrderSuccess';
+
+
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:id" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/sucess/:id" element={<OrderSuccess />} />
           </Routes>
           <main className="container ct-main">
           </main>

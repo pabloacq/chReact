@@ -20,7 +20,7 @@ function CartItemList({ cart }) {
       <tbody>
         {cart.map(cartItem => {
           subTotal += cartItem.totalPrice
-          return <CartItem cartItem={cartItem} />
+          return <CartItem key={cartItem.id} cartItem={cartItem} />
         })}
         <tr className="table-primary">
           <th scope="row">Subtotal</th>

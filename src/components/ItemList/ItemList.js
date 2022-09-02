@@ -1,16 +1,6 @@
 import React,{ useEffect, useState } from 'react'
 import ItemCard from '../ItemCard/ItemCard'
-import itemsData from '../../products.js'
 import {getProductsByCategory, getAllProducts} from '../../services/DB'
-
-// function getProductos(category){
-//   return new Promise((resolve) => {
-//     // setTimeout(() => resolve(itemsData), 2000)
-//     setTimeout(() => resolve(
-//       category ? itemsData.filter(item => item.category === category ) : itemsData
-//     ), 2000)
-//   });
-// }
 
 
 function ItemList({category}) {
