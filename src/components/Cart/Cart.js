@@ -34,7 +34,7 @@ function Cart() {
         ? <CartItemList cart={cart} />
         : <Link to="/">Tu carrito esta vacio, empezar a comprar!</Link>
       }
-      <UserForm onSubmit={handleSubmit} cart={cart} navigate={navigate} />
+      <UserForm onSubmit={(e, userData) => handleSubmit(e, userData, cart, navigate)}/>
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function UserForm({ onSubmit, cart, navigate }) {
 
   const { Label, Control, Group } = Form
   return (
-    <Form className="m-3" onSubmit={(e) => onSubmit(e, userData, cart, navigate )}>
+    <Form className="m-3" onSubmit={(e) => onSubmit(e, userData)}>
       <Group className="mb-3" controlId="formBasicEmail">
         <Label>Nombre</Label>
         <Control
