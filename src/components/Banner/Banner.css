@@ -1,0 +1,65 @@
+:root{
+  --banner-height: 50vh;
+}
+
+#banner {
+  position: relative;
+  height: var(--banner-height);
+  overflow: hidden; 
+}
+
+#img-container
+{
+  grid-area: photo;
+}
+
+#img-container img{
+  max-height: calc(var(--banner-height));
+}
+
+#banner-content {
+  padding: 0vw 10vw 0vw 10vw;
+  display: grid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  color: black;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "title photo";
+}
+
+#banner-bg {
+  content: ' ';
+  background-color: white;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background-image: url('../../assets/img/paws.png');
+  background-size: 300px 300px;
+}
+
+.banner-main {
+  font-size: calc(10.5vw) !important;
+  color: var(--main-blue) !important;
+}
+
+.banner-text {
+  font-size: calc(2rem + 1vw) !important;
+  font-family: var(--logo-font);
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #f2c119;
+  text-shadow: 4px 4px 0 white,
+    -4px 4px 0 white,
+    4px -4px 0 white,
+    -4px -4px 0 white;
+}

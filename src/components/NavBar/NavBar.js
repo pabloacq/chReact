@@ -12,7 +12,7 @@ function NavBar() {
   const {Item} = NavDropdown
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="french" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Link to="/" className="logoMain navbar-brand">CatShop</Link>
         <Toggle aria-controls="responsive-navbar-nav" />

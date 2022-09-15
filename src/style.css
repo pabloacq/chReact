@@ -1,13 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Moo+Lah+Lah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Moo+Lah+Lah&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.logoMain {
-    font-size: 32px;
-    font-family: 'Moo Lah Lah', cursive;
-    margin-bottom: 0; }
-
-.bg-french{
-  background-color: #0072B5;
+:root{
+  --main-blue-rgb:24,54,97;
+  --main-blue: #183661;
+  --bs-dark-rgb:var(--main-blue-rgb) !important;
+  --logo-font: 'Paytone One', sans-serif;
 }
+
+body{
+  font-family: Poppins,sans-serif;
+}
+
+.logoMain{
+    font-size: 32px;
+    font-family: var(--logo-font);
+    margin-bottom: 0; 
+}
+
+.logo{
+  font-family: var(--logo-font);
+}
+
 
 .ct-main{
   margin-top: 1vh;
@@ -17,3 +31,12 @@
   width: calc(100% / 3) !important;
 }
 
+.navbar-dark{
+  --bs-navbar-color:white !important;
+  --bs-navbar-hover-color: #f2c119 !important;
+  --bs-navbar-active-color:#f2c119 !important;
+}
+
+.nav-link{
+  text-transform: uppercase;
+}

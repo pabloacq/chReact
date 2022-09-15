@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './style.css';
 import { CartProvider } from './store/CartContext'
 import OrderSuccess from './components/OrderSuccess/OrderSuccess';
+import {Index} from './pages/Pages'
 
 
 
@@ -18,7 +19,7 @@ function App() {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route path="/" element={<ItemListContainer greeting="Ofertas" />} />
+            <Route path="/" element={<Index />} />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/category/:id" element={<ItemListContainer />} />
             <Route path="/cart" element={<Cart />} />

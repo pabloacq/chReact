@@ -9,7 +9,6 @@ import {createOrder} from '../../services/DB'
 
 async function handleSubmit(e, userData, cart, navigate) {
   e.preventDefault();
-  //{buyer: {name, phone, email}, items[id, title, price, quantity], date, total}
   let totalPrice = 0
   const items = cart.map(cartItem => {
     totalPrice += cartItem.totalPrice
@@ -19,6 +18,8 @@ async function handleSubmit(e, userData, cart, navigate) {
   const order = { buyer: { ...userData }, items: items, date: new Date().toString(), total:totalPrice }
   const orderID = await createOrder(order)
   
+  cart.clear()
+
   navigate(`../sucess/${orderID}`)
 }
 
