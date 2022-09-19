@@ -4,9 +4,11 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 
 function Index() {
   return (
-    <div>
+    <div className="mt-n5 w-100">
       <Banner></Banner>
-      <ItemListContainer greeting="Ofertas" />
+      <div className="pt-5 mx-5">
+        <ItemListContainer greeting="Productos destacados" />
+      </div>
     </div>
   )
 }

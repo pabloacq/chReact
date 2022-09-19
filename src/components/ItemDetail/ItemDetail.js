@@ -1,28 +1,47 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 import { cartContext } from '../../store/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTruckFast } from '@fortawesome/free-solid-svg-icons'
+import { getProductsByCategory } from '../../services/DB';
 
 
 function ItemDetail({ product }) {
-  const {addToCart, cart} = useContext(cartContext)
+  const { addToCart, cart } = useContext(cartContext)
 
   function handleAdd(quantity) {
     addToCart(product, quantity)
   }
 
 
-  const { img, name, description } = product || {}
+  const { img, name, description, price, stock, presentacion } = product || {}
   return (
-    <Card style={{ width: '18%' }}>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title className="h-50">{name}</Card.Title>
-      </Card.Body>
-      <Card.Text>{description}</Card.Text>
-      <ItemCount product={product} onAdd={handleAdd} /> 
-    </Card>
+    <div className="d-flex flex-md-row flex-column">
+      <div className="d-flex flex-md-fill justify-content-center align-items-start w-md-33">
+        <div><img src={img} alt={name}></img></div>
+      </div>
+      <div className="d-flex flex-md-fill w-md-33 flex-column mt-3 mt-md-0">
+        <h2>{name}</h2>
+        <span className="text-muted">{presentacion}</span>
+        <h3>$ {price}</h3>
+        <span>{description}</span>
+      </div>
+      <div className="d-flex flex-md-fill w-md-33 flex-column p-3 ms-3 border-md-start border-warning">
+        {stock > 0 ?
+          <div className="d-flex flex-column">
+            <span className="m-1 text-success"><FontAwesomeIcon icon={faTruckFast} /> Llega gratis mañana</span>
+            <span className="m-1 fw-bold">Stock Disponible</span>
+            <ItemCount className="d-flex flex-column px-0 mt-md-5" product={product} onAdd={handleAdd} />
+          </div>
+          :
+          <div>
+            <span> Producto sin stock </span>
+          </div>
+        }
+      </div>
+    </div>
   );
 }
 

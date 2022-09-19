@@ -4,4 +4,7 @@
 
 .ItemListContainer h2{
   text-align: left;
+  margin-bottom:40px;
+  padding-bottom:10px;
+  border-bottom: var(--main-yellow) solid 5px;
 }

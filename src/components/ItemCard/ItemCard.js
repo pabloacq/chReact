@@ -1,17 +1,20 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
-import {Link} from 'react-router-dom'
 import './ItemCard.css'
 
-function ItemCard({product}) {
+function ItemCard({ product }) {
   return (
-    <Card style={{ width: '18%' }}>
-      <Card.Img variant="top" src={product.img} />
-      <Card.Body>
-        <Card.Title className="h-50">{product.name}</Card.Title>
-        <Link to={`/detail/${product.id}`}> Ver mas</Link>
-      </Card.Body>
-    </Card>
+    <div className="card">
+      <div className="h-70 bg-card">
+        <img className="card-img-top h-100" alt={product.name} src={product.img} />
+      </div>
+      <div className="card-body h-30 d-flex flex-column">
+        <h5 className="row card-title">{product.name}</h5>
+        <div className="row mh-lh">
+          <span className="col text-muted p-0">{product.presentacion}</span>
+        </div>
+        <p className=" row card-text" >$ {product.price}</p>
+      </div>
+    </div>
   );
 }
 

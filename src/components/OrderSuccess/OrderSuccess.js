@@ -1,10 +1,12 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
 
-function OrderSuccess() {
-  const orderId = (useParams().id)
+
+function OrderSuccess({ orderId }) {
   return (
-    <div>{`Gracias por tu compra! El identificador de tu pedido es ${orderId}`}</div>
+    <div>
+      <h2>¡Gracias por tu compra!</h2>
+      <p>{`El identificador de tu pedido es ${orderId}`}</p>
+    </div>
   )
 }
 

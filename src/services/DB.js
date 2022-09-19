@@ -43,8 +43,6 @@ export function getProductById(id) {
 export async function createProduct(product){
   const productCollection = collection(DB, "productos")
   const docRef = await addDoc(productCollection, product);
-
-  console.log(docRef.id)
 }
 
 export async function createOrder(order){

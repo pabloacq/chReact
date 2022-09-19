@@ -1,6 +1,5 @@
 import React, { useState, createContext, useEffect } from 'react'
 
-
 export const cartContext = createContext()
 
 function calculatePrice(item, quantity = item.quantity){
@@ -49,12 +48,12 @@ export function CartProvider({children}) {
     return item
   }
   
-  function clear(){
+  function clearCart(){
     setCart([])
   }
 
   return (
-    <cartContext.Provider value={{cart, addToCart, removeItem, quantity, clear}}>
+    <cartContext.Provider value={{cart, addToCart, removeItem, quantity, clearCart}}>
       {children}
     </cartContext.Provider>
   )

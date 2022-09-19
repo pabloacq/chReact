@@ -1,36 +1,35 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Cart from './components/Cart/Cart'
+import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './style.css';
 import { CartProvider } from './store/CartContext'
-import OrderSuccess from './components/OrderSuccess/OrderSuccess';
-import {Index} from './pages/Pages'
+import { Index, Product, ProductList, Cart, Success, Ofertas } from './pages/Pages'
 
 
 
 function App() {
   return (
     <div className="App">
-
       <BrowserRouter>
         <CartProvider>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/detail/:id" element={<ItemDetailContainer />} />
-            <Route path="/category/:id" element={<ItemListContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/sucess/:id" element={<OrderSuccess />} />
-          </Routes>
-          <main className="container ct-main">
+          <main className="ct-main d-flex py-4">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/products/detail/:id" element={<Product />} />
+              <Route path="/products/:id" element={<ProductList />} />
+              <Route path="/products/" element={<ProductList />} />
+              <Route path="/ofertas/" element={<Ofertas />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/sucess/:id" element={<Success />} />
+            </Routes>
           </main>
+          <Footer></Footer>
         </CartProvider>
       </BrowserRouter>
 
-    </div>
+    </div >
   );
 }
 

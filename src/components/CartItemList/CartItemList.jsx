@@ -1,36 +1,26 @@
 import React from 'react'
 import CartItem from '../CartItem/CartItem'
-import Table from 'react-bootstrap/Table';
 
 function CartItemList({ cart }) {
   let subTotal = 0
   return (
 
-    <Table striped hover>
-      <thead>
-        <tr>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio unitario</th>
-          <th>Precio total</th>
-          <th></th>
-        </tr>
-      </thead>
+    <div className="d-flex flex-column align-content-start ">
+      <div className="border-bottom border-secondary py-2"></div>
 
-      <tbody>
-        {cart.map(cartItem => {
-          subTotal += cartItem.totalPrice
-          return <CartItem key={cartItem.id} cartItem={cartItem} />
-        })}
-        <tr className="table-primary">
-          <th scope="row">Subtotal</th>
-          <td></td>
-          <td></td>
-          <td>{subTotal}</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </Table>
+      {cart.map(cartItem => {
+        subTotal += cartItem.totalPrice
+        return <div className="border-bottom border-secondary py-2 row">
+          <CartItem key={cartItem.id} cartItem={cartItem} />
+        </div>
+      })}
+
+      <div className="border-bottom border-secondary py-2 row">
+        <div className="col-md-9"></div>
+        <div className="col-md-1 col d-flex align-items-end"><p>Total</p></div>
+        <div className="col-md-2 col d-flex justify-content-end"><p className="fs-4">$ {subTotal}</p></div>
+      </div>
+    </div>
   )
 }
 

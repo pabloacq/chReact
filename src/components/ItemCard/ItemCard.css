@@ -1,9 +1,40 @@
-.card-body{
-  display:flex;
-  flex-direction: column;
+.card{
+  --bs-card-border-radius: 0px !important;
+  --bs-card-height:300px !important;
+  width: 200px;
+  height: 300px;
+  --bs-card-inner-border-radius:0px !important;
+  --bs-card-border-width:0px !important;
 }
 
-.card
-{
-  margin-left:1%
+.card-body{
+  --bs-card-color:black;
+  text-decoration:none;
+}
+
+.card:hover{
+  transform:scale(1.02);
+}
+
+.card-img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mh-lh{
+  min-height: 24px;
+}
+
+
+.bg-card{
+  background-color: #efefec;
+}
+
+.h-70{
+  height: 70%;
+}
+
+.h-30{
+  height: 30%;
 }

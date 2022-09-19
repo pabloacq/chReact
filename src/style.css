@@ -1,15 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Moo+Lah+Lah&family=Paytone+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
 :root{
   --main-blue-rgb:24,54,97;
   --main-blue: #183661;
+  --main-yellow: #f2c119;
   --bs-dark-rgb:var(--main-blue-rgb) !important;
   --logo-font: 'Paytone One', sans-serif;
+  --bs-card-color: black;
+  --bs-primary:var(--main-blue) !important;
+  --bs-primary-rgb:var(--main-blue-rgb) !important;
+  --bs-secondary: #f2c119 !important;
+  --bs-secondary-rgb: 242, 193, 25 !important;
+  --navbar-height: 7vh;
+  --footer-height: 5vh;
+  --main-height: calc(100vh - var(--navbar-height) - var(--footer-height))
 }
+
+#root .App{
+  min-height: 100vh;
+}
+
+.navbar{
+  min-height: var(--navbar-height);
+}
+
+.footer{
+  min-height: var(--footer-height);
+}
+
+
 
 body{
   font-family: Poppins,sans-serif;
+  --bs-body-bg:#f8f8e5;
+  --bs-body-font-family: 'Poppins',sans-serif;
+}
+
+bg-main{
+  background-color: var(--main-blue)
 }
 
 .logoMain{
@@ -22,9 +51,8 @@ body{
   font-family: var(--logo-font);
 }
 
-
 .ct-main{
-  margin-top: 1vh;
+  min-height: var(--main-height) ;
 }
 
 .w-33{
@@ -37,6 +65,64 @@ body{
   --bs-navbar-active-color:#f2c119 !important;
 }
 
+
+
 .nav-link{
   text-transform: uppercase;
+}
+
+h2{
+  font-weight: 700 !important;
+}
+
+a{
+  text-decoration: none !important;
+  color:black;
+}
+
+.btn-primary{
+  --bs-btn-bg: var(--main-blue) !important;
+  --bs-btn-border-color: var(--main-blue) !important;
+}
+
+.lh-23
+{
+  line-height: 2.3rem;
+}
+
+.mt-n5{
+  margin-top: -1.5rem !important;
+}
+
+@media (min-width: 768px){
+  .m-md-6,
+  .m-md-6 {
+    margin: 6rem !important;
+  }
+  .m-md-7,
+  .m-md-7 {
+    margin: 12rem !important;
+  }
+
+  .mx-md-6,
+  .mx-md-6 {
+    margin-left: 6rem !important;
+    margin-right: 6rem !important;
+  }
+
+  .mw-md-33{
+    max-width: 33%;
+  }
+
+  .w-md-33{
+    width: 33%;
+  }
+
+  .mh-10vh{
+    max-height: 10vh;
+  }
+
+  .border-md-start{
+    border-left: solid 1px;
+  }
 }

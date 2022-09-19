@@ -54,7 +54,7 @@ export default function UserForm({ onSubmit, cart, navigate }) {
         />
       </Group>
       <Button variant="primary" type="submit">
-        Submit
+        Enviar
       </Button>
     </Form>
   )
