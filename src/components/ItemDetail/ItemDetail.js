@@ -1,11 +1,9 @@
 import React, { useContext } from 'react'
-import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 import { cartContext } from '../../store/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruckFast } from '@fortawesome/free-solid-svg-icons'
-import { getProductsByCategory } from '../../services/DB';
 
 
 function ItemDetail({ product }) {
@@ -20,7 +18,7 @@ function ItemDetail({ product }) {
   return (
     <div className="d-flex flex-md-row flex-column">
       <div className="d-flex flex-md-fill justify-content-center align-items-start w-md-33">
-        <div><img src={img} alt={name}></img></div>
+        <div><img src={`${process.env.PUBLIC_URL}${img}`} alt={name}></img></div>
       </div>
       <div className="d-flex flex-md-fill w-md-33 flex-column mt-3 mt-md-0">
         <h2>{name}</h2>

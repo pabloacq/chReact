@@ -11,7 +11,7 @@ function CartItem({ cartItem }) {
   return (
     <div className="my-1">
       <div className='row'>
-        <div className="col-md-2 col-4"><img src={cartItem.img} alt={cartItem.name} className="img-fluid mh-10vh"></img></div>
+        <div className="col-md-2 col-4"><img src={`${process.env.PUBLIC_URL}${cartItem.img}`} alt={cartItem.name} className="img-fluid mh-10vh"></img></div>
         <div className="col-md-10 col-8 d-flex flex-column">
             <div>
               <div className="d-flex flex-row align-items-start">

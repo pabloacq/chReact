@@ -11,7 +11,7 @@ import { Index, Product, ProductList, Cart, Success, Ofertas } from './pages/Pag
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <CartProvider>
           <NavBar />
           <main className="ct-main d-flex py-4">

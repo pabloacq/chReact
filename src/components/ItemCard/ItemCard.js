@@ -5,7 +5,7 @@ function ItemCard({ product }) {
   return (
     <div className="card">
       <div className="h-70 bg-card">
-        <img className="card-img-top h-100" alt={product.name} src={product.img} />
+        <img className="card-img-top h-100" alt={product.name} src={`${process.env.PUBLIC_URL}${product.img}`} />
       </div>
       <div className="card-body h-30 d-flex flex-column">
         <h5 className="row card-title">{product.name}</h5>
